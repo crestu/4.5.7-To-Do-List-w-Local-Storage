@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Your Page Title</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js">
+		</script>
+	</head>
+
+	<body>
+		<div id = "to-do">
+		    <h4>To Do List!</h4>
+		</div>
+		<hr>
+		<div>
+		    <form id = "task-form" onsubmit = "formData()">
+		        <input type= "text" name="task">
+		        <input type = "submit">
+		    </form>
+		</div>
+		<br>
+		<div id= "to-do-list">
+		</div>
+	</body>
+	<script>
+	    function formData()
+        {
+	        event.preventDefault();
+            var data = $("form").serializeArray();
+            var task= data[0].value;
+            $("#to-do-list").append("<li>"+task+"<br>")
+	    }
+
+		
+		$("li").on("click",function(){
+			this.getAttribute("style"=="text-decoration: line=through");
+		});
+
+		localStorage.setItem
+
+	</script>
+</html>
+
+<!-- //save list in local storage
+	//when add new item
+	//save task in a task list in localStorage
+	//tasks should stay if refreshed
+
+//create click event that strikes through a list item
+	//when completed
+	//should be removed from the task list
+		//so when you reload the page that task no longer shows up
+
+//the text in the li shoud match the value that exists in task list
+//use functoin splice
+//jquery index() will return the index value that an element occurs within its parents element'
+	//useful when removing an element from list
+//use on instead of click -->
+
+
+<!-- //create a simple to do list
+    //use input
+
+//use the onsubmit attribute
+    //to initiate a function
+        //take form data using serialArray
+        //append it to the to-do list div
+        
+//use event.preventDefault
+//research trigger
+// two inputs 
+    //one for name of task
+    //one for onsubmit -->
